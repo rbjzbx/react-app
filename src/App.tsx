@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <div className="profile">
+        <img src="./assets/avatar.jpg" alt="李四" className="avatar" />
+        <h1 className="name">李四</h1>
+        <p className="bio">前端开发工程师 | 技术爱好者</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className="social-links">
+        <a href="https://github.com/lisi" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://twitter.com/lisi" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://linkedin.com/in/lisi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <div className="projects">
+        <h2>项目展示</h2>
+        <div className="project-card">
+          <h3>项目一</h3>
+          <p>这是一个关于React的项目。</p>
+        </div>
+        <div className="project-card">
+          <h3>项目二</h3>
+          <p>这是一个关于Vue的项目。</p>
+        </div>
+      </div>
+    </div>
   )
 }
 
